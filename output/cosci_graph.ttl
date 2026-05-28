@@ -57,7 +57,7 @@ Not implemented yet:
 - Explicit semantics over impl""" ;
     cosci:level "Formal" ;
     cosci:status "stable" ;
-    dcterms:created "2026-05-28T03:40:58.721551" ;
+    dcterms:created "2026-05-28T04:26:11.424036" ;
     dcterms:title "Knowledge Graph Overview" .
 
 <http://example.org/cosci/semantic-boundaries> a cosci:KnowledgeDocument ;
@@ -103,7 +103,7 @@ Beispiele:
 - Vali""" ;
     cosci:level "Formal" ;
     cosci:status "stable" ;
-    dcterms:created "2026-05-28T03:40:58.721906" ;
+    dcterms:created "2026-05-28T04:26:11.424330" ;
     dcterms:title "Semantic Boundaries" .
 
 <http://example.org/cosci/semantic-linter> a cosci:KnowledgeDocument ;
@@ -145,7 +145,7 @@ level:
 status:""" ;
     cosci:level "Implementierbar" ;
     cosci:status "draft" ;
-    dcterms:created "2026-05-28T03:40:58.722233" ;
+    dcterms:created "2026-05-28T04:26:11.424591" ;
     dcterms:title "Semantic Linter" .
 
 <http://example.org/cosci/semantic-validation> a cosci:KnowledgeDocument ;
@@ -173,7 +173,7 @@ Eingabedateien:
 knowledge-graph/*.md""" ;
     cosci:level "Implementierbar" ;
     cosci:status "draft" ;
-    dcterms:created "2026-05-28T03:40:58.722556" ;
+    dcterms:created "2026-05-28T04:26:11.425186" ;
     dcterms:title "Semantic Validation" .
 
 <http://example.org/cosci/system-map> a cosci:KnowledgeDocument ;
@@ -210,6 +210,6 @@ Fachliche Analysebereiche und Forschungsgrundlagen.
 ### 5. Infrastr""" ;
     cosci:level "Interpretativ" ;
     cosci:status "draft" ;
-    dcterms:created "2026-05-28T03:40:58.722868" ;
+    dcterms:created "2026-05-28T04:26:11.425643" ;
     dcterms:title "System Map" .
 

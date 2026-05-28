@@ -1,27 +1,15 @@
-def main():
-
-    graph = Graph()
-
-    # RDF laden
-    graph.parse("output/cosci_graph.ttl", format="turtle")
-
-    print("Loaded RDF graph.\n")
-
-    errors = 0
-
-    # NUR echte Dokumente validieren
-    for subject in graph.subjects(RDF.type, COSCI.KnowledgeDocument):
-
-        print(f"Validating: {subject}")
-
 #!/usr/bin/env python3
 """
-CoSci Graph Validator - Phase 1
+CoSci Graph Validator - Phase 2 Minimal
 
 Prüft:
-- Existiert level?
-- Existiert status?
-- Sind level/status gültige Werte?
+- RDF-Datei existiert
+- KnowledgeDocument-Instanzen existieren
+- level ist vorhanden
+- status ist vorhanden
+- level hat erlaubten Wert
+- status hat erlaubten Wert
+- Visionär wird als Warnung markiert
 """
 
 from pathlib import Path
@@ -29,50 +17,41 @@ from pathlib import Path
 from rdflib import Graph, Namespace, RDF
 
 
-# Namespace
 COSCI = Namespace("http://cosci.local/ontology#")
 
-
-# Erlaubte Werte
 VALID_LEVELS = {
     "Formal",
     "Implementierbar",
     "Empirisch",
     "Interpretativ",
-    "Visionär"
+    "Visionär",
 }
 
 VALID_STATUS = {
     "draft",
     "stable",
     "reviewed",
-    "deprecated"
+    "deprecated",
 }
 
 
 def main():
-
-    # RDF-Datei prüfen
     ttl_file = Path("output/cosci_graph.ttl")
 
     if not ttl_file.exists():
-        print("ERROR: RDF graph not found.")
-        print("Run parser first:")
-        print("python3 tools/markdown_to_rdf.py")
-        return
+        print("ERROR: RDF graph not found. Run parser first.")
+        return 1
 
-    # RDF laden
     graph = Graph()
     graph.parse(str(ttl_file), format="turtle")
 
     print(f"Loaded RDF graph: {len(graph)} triples\n")
 
     errors = 0
+    warnings = 0
     validated_docs = 0
 
-    # Nur echte Dokumente validieren
     for doc in graph.subjects(RDF.type, COSCI.KnowledgeDocument):
-
         validated_docs += 1
 
         print(f"Validating: {doc}")
@@ -80,11 +59,9 @@ def main():
         level = graph.value(doc, COSCI.level)
         status = graph.value(doc, COSCI.status)
 
-        # level prüfen
         if level is None:
             print(f"ERROR: Missing level -> {doc}")
             errors += 1
-
         else:
             level_str = str(level)
 
@@ -92,11 +69,13 @@ def main():
                 print(f"ERROR: Invalid level '{level_str}' -> {doc}")
                 errors += 1
 
-        # status prüfen
+            if level_str == "Visionär":
+                print(f"WARNING: Visionär level used -> {doc}")
+                warnings += 1
+
         if status is None:
             print(f"ERROR: Missing status -> {doc}")
             errors += 1
-
         else:
             status_str = str(status)
 
@@ -104,15 +83,23 @@ def main():
                 print(f"ERROR: Invalid status '{status_str}' -> {doc}")
                 errors += 1
 
-    # Zusammenfassung
-    print("\nValidation finished.")
+    if validated_docs == 0:
+        print("ERROR: No KnowledgeDocument instances found.")
+        errors += 1
+
+    print("\n=== Validation Summary ===")
     print(f"Documents checked: {validated_docs}")
+    print(f"Warnings: {warnings}")
+    print(f"Errors: {errors}")
 
     if errors == 0:
-        print("No validation errors found.")
-    else:
-        print(f"Validation errors: {errors}")
+        print("Pipeline valid.")
+        return 0
+
+    print("Pipeline invalid.")
+    return 1
 
 
 if __name__ == "__main__":
-    main()
+    raise SystemExit(main())
+
