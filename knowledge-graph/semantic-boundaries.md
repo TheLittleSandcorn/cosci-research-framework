@@ -1,45 +1,128 @@
-# Semantic Boundaries & Epistemic Discipline
+---
+title: Semantic Boundaries
+level: Formal
+status: stable
+---
 
-## Purpose
+# Semantic Boundaries
 
-This document prevents semantic inflation, conceptual drift, and uncontrolled abstraction inside the 
-CoSci Research Framework.
+## Zweck
 
-Every future claim must be assigned to a clear epistemic level.
+Definition epistemischer Grenzen zur Reduktion semantischer Inflation,
+Kategorienvermischung und unbegründeter Systembehauptungen.
+
+Das Dokument definiert erlaubte semantische Ebenen innerhalb des
+CoSci-Frameworks.
 
 ---
 
-## Binding Epistemic Levels
+# Epistemische Ebenen
 
-| Level | Allowed Claims | Not Allowed |
-|---|---|---|
-| Formal | mathematically or logically provable claims | metaphor presented as fact |
-| Implementable | technically buildable with current tools | unimplemented system claims |
-| Empirical | measurable through tests or metrics | untested performance claims |
-| Interpretive | clearly marked metaphors or interpretations | mixing metaphor with formal claims |
-| Visionary | long-term strategic intent | presenting future goals as current reality |
+## 1. Formal
 
----
+Streng definierte Strukturen.
 
-## Restricted Terms
+Beispiele:
+- RDF
+- Ontologien
+- Parser-Regeln
+- Validierungslogik
+- mathematische Definitionen
 
-The following terms require strict handling:
-
-- transdimensional
-- emergent
-- cognitive
-- consciousness
-- lattice
-- algebraically grounded
-- sovereign system
-
-These terms may only be used when their epistemic level is explicitly stated.
+Kriterien:
+- explizit prüfbar
+- reproduzierbar
+- deterministisch
 
 ---
 
-## Final Rule
+## 2. Implementierbar
 
-If a claim cannot be assigned to one of the epistemic levels above, it should not be added to the 
-repository.
+Technisch realisierbare Komponenten.
 
+Beispiele:
+- Python-Skripte
+- RDF-Pipelines
+- Validatoren
+- GitHub Actions
+
+Kriterien:
+- praktisch umsetzbar
+- technisch konkret
+- operational beschreibbar
+
+---
+
+## 3. Empirisch
+
+Beobachtbare oder messbare Aussagen.
+
+Beispiele:
+- Anzahl RDF-Triples
+- Parser-Warnings
+- Validierungsfehler
+- Laufzeitmetriken
+
+Kriterien:
+- beobachtbar
+- messbar
+- dokumentierbar
+
+---
+
+## 4. Interpretativ
+
+Konzeptionelle oder analytische Beschreibungen.
+
+Beispiele:
+- Systembeschreibungen
+- Architekturinterpretationen
+- theoretische Einordnungen
+
+Kriterien:
+- argumentativ nachvollziehbar
+- explizit nicht formal bewiesen
+
+---
+
+## 5. Visionär
+
+Spekulative oder zukünftige Richtungen.
+
+Beispiele:
+- zukünftige Wissenssysteme
+- hypothetische semantische Agenten
+- mögliche Erweiterungen
+
+Kriterien:
+- klar als spekulativ markiert
+- keine Darstellung als bestehende Realität
+
+---
+
+# Verbotene semantische Muster
+
+Folgende Muster gelten als semantische Inflation:
+
+- unbegründete Systembehauptungen
+- Vermischung epistemischer Ebenen
+- Darstellung hypothetischer Systeme als implementiert
+- anthropomorphe KI-Beschreibungen ohne technische Basis
+- undefinierte Begriffe
+
+---
+
+# Ziel
+
+Semantische Disziplin.
+
+Nicht:
+- rhetorische Eskalation
+- visionäre Überhöhung
+- unbegründete Komplexität
+
+Sondern:
+- explizite Struktur
+- überprüfbare Aussagen
+- minimale stabile Semantik
 

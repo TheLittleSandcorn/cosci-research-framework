@@ -57,145 +57,159 @@ Not implemented yet:
 - Explicit semantics over impl""" ;
     cosci:level "Formal" ;
     cosci:status "stable" ;
-    dcterms:created "2026-05-28T03:04:42.086691" ;
+    dcterms:created "2026-05-28T03:40:58.721551" ;
     dcterms:title "Knowledge Graph Overview" .
 
 <http://example.org/cosci/semantic-boundaries> a cosci:KnowledgeDocument ;
-    cosci:contentPreview """# Semantic Boundaries & Epistemic Discipline
+    cosci:contentPreview """# Semantic Boundaries
 
-## Purpose
+## Zweck
 
-This document prevents semantic inflation, conceptual drift, and uncontrolled abstraction inside the 
-CoSci Research Framework.
+Definition epistemischer Grenzen zur Reduktion semantischer Inflation,
+Kategorienvermischung und unbegründeter Systembehauptungen.
 
-Every future claim must be assigned to a clear epistemic level.
+Das Dokument definiert erlaubte semantische Ebenen innerhalb des
+CoSci-Frameworks.
 
 ---
 
-## Binding Epistemic Levels
+# Epistemische Ebenen
 
-| Level | Allowed Claims | Not Allowed |
-|---|---|---|
-| Formal | mathematically or logically provable claims | metaphor presented as fact |
-| Implementable | technically buildable with current tools | unimplemented system claims |
-| Empirical | measurable through tests or metrics | untested performance claims |
-""" ;
-    cosci:level "Interpretativ" ;
-    cosci:status "draft" ;
-    dcterms:created "2026-05-28T03:04:42.086916" ;
-    dcterms:title "semantic-boundaries" .
+## 1. Formal
+
+Streng definierte Strukturen.
+
+Beispiele:
+- RDF
+- Ontologien
+- Parser-Regeln
+- Validierungslogik
+- mathematische Definitionen
+
+Kriterien:
+- explizit prüfbar
+- reproduzierbar
+- deterministisch
+
+---
+
+## 2. Implementierbar
+
+Technisch realisierbare Komponenten.
+
+Beispiele:
+- Python-Skripte
+- RDF-Pipelines
+- Vali""" ;
+    cosci:level "Formal" ;
+    cosci:status "stable" ;
+    dcterms:created "2026-05-28T03:40:58.721906" ;
+    dcterms:title "Semantic Boundaries" .
 
 <http://example.org/cosci/semantic-linter> a cosci:KnowledgeDocument ;
-    cosci:contentPreview """# Semantic Linter & Validation Rules
+    cosci:contentPreview """# Semantic Linter
 
-## Purpose
+## Zweck
 
-This document defines rules that can later be automated to detect semantic drift, conceptual inflation, 
-and epistemic boundary violations.
+Definition maschinenprüfbarer Regeln zur Erkennung semantischer
+Inkonsistenzen und semantischer Inflation.
 
-## Core Rules
+Der Semantic Linter ergänzt:
+- semantic-boundaries.md
+- semantic-validation.md
+- entity-model.ttl
 
-### 1. Epistemic Level Assignment
+---
 
-Every major claim should be assigned to one of the following levels:
+# Kernprinzip
 
-- Formal
-- Implementable
-- Empirical
-- Interpretive
-- Visionary
+Semantische Aussagen sollen:
+- explizit
+- kategorisiert
+- überprüfbar
+- reproduzierbar
 
-Missing assignment should produce a linter warning.
+sein.
 
-### 2. Restricted Terms
+---
 
-Restricted terms such as:
+# Linter-Regeln
 
-- transdimensional
-- emergent
-- cognitive
-- consciousness
-- lattice
-- epistemic system
-- algebraically grounded
+## Regel 1 — Pflicht-Frontmatter
 
-requir""" ;
-    cosci:level "Interpretativ" ;
+Jede Datei im knowledge-graph benötigt:
+
+```yaml
+title:
+level:
+status:""" ;
+    cosci:level "Implementierbar" ;
     cosci:status "draft" ;
-    dcterms:created "2026-05-28T03:04:42.087125" ;
-    dcterms:title "semantic-linter" .
+    dcterms:created "2026-05-28T03:40:58.722233" ;
+    dcterms:title "Semantic Linter" .
 
 <http://example.org/cosci/semantic-validation> a cosci:KnowledgeDocument ;
-    cosci:contentPreview """# Semantic Validation Layer
+    cosci:contentPreview """# Semantic Validation
 
-## Purpose
+## Zweck
 
-This document defines how future CoSci documents should be checked against semantic boundaries and 
-epistemic discipline rules.
+Definition der aktuellen semantischen Validierungslogik
+innerhalb der CoSci-Pipeline.
 
-The goal is to prevent:
-
-- semantic drift
-- conceptual inflation
-- unsupported claims
-- metaphor-as-fact errors
-- uncontrolled abstraction
+Die Validierung prüft:
+- strukturelle Konsistenz
+- erlaubte Werte
+- minimale semantische Disziplin
 
 ---
 
-## Validation Checklist
+# Aktuelle Pipeline
 
-Every new document should be reviewed against the following questions:
+## Schritt 1 — Markdown
 
-| Check | Question |
-|---|---|
-| Epistemic Level | Is every major claim assigned to a level: formal, implementable, empirical, 
-interpretive, or visionary? |
-| Restricted Terms | Are restr""" ;
-    cosci:level "Interpretativ" ;
+Eingabedateien:
+
+```text
+knowledge-graph/*.md""" ;
+    cosci:level "Implementierbar" ;
     cosci:status "draft" ;
-    dcterms:created "2026-05-28T03:04:42.087327" ;
-    dcterms:title "semantic-validation" .
+    dcterms:created "2026-05-28T03:40:58.722556" ;
+    dcterms:title "Semantic Validation" .
 
 <http://example.org/cosci/system-map> a cosci:KnowledgeDocument ;
-    cosci:contentPreview """# CoSci System Map
+    cosci:contentPreview """# System Map
 
-## Core Domains
+## Zweck
 
-- Research
-- Governance
-- Infrastructure
-- AI Systems
-- Knowledge Graphs
-- Benchmarking
-- Digital Sovereignty
-- Open Science
+Diese Datei beschreibt die aktuelle Struktur des CoSci-Frameworks
+auf einer interpretativen Ebene.
+
+Sie ist keine formale Ontologie und keine Implementierung.
+Sie dient der Orientierung.
 
 ---
 
-## Strategic Objective
+## Aktuelle Kernbereiche
 
-Transform fragmented technological knowledge into structured operational intelligence systems.
+### 1. Framework
 
----
+Grundlegende Mission, Architekturprinzipien und strategische Richtung.
 
-## System Principle
+### 2. Governance
 
-Every domain must be:
+Regeln, Standards und Grenzen für wissenschaftliche und technische Arbeit.
 
-- interconnected
-- traceable
-- scientifically grounded
-- operationally useful
-- enterprise scalable
+### 3. Knowledge Graph
 
----
+Semantische Strukturierung, RDF-Modellierung und Validierung.
 
-## Long-Term Vision
+### 4. Research
 
-Build a sovereign European research and infrastructure intelligence framework.""" ;
+Fachliche Analysebereiche und Forschungsgrundlagen.
+
+### 5. Infrastr""" ;
     cosci:level "Interpretativ" ;
     cosci:status "draft" ;
-    dcterms:created "2026-05-28T03:04:42.087529" ;
-    dcterms:title "system-map" .
+    dcterms:created "2026-05-28T03:40:58.722868" ;
+    dcterms:title "System Map" .
 

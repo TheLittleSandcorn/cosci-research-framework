@@ -1,37 +1,55 @@
-# CoSci System Map
+---
+title: System Map
+level: Interpretativ
+status: draft
+---
 
-## Core Domains
+# System Map
 
-- Research
-- Governance
-- Infrastructure
-- AI Systems
-- Knowledge Graphs
-- Benchmarking
-- Digital Sovereignty
-- Open Science
+## Zweck
+
+Diese Datei beschreibt die aktuelle Struktur des CoSci-Frameworks
+auf einer interpretativen Ebene.
+
+Sie ist keine formale Ontologie und keine Implementierung.
+Sie dient der Orientierung.
 
 ---
 
-## Strategic Objective
+## Aktuelle Kernbereiche
 
-Transform fragmented technological knowledge into structured operational intelligence systems.
+### 1. Framework
+
+Grundlegende Mission, Architekturprinzipien und strategische Richtung.
+
+### 2. Governance
+
+Regeln, Standards und Grenzen für wissenschaftliche und technische Arbeit.
+
+### 3. Knowledge Graph
+
+Semantische Strukturierung, RDF-Modellierung und Validierung.
+
+### 4. Research
+
+Fachliche Analysebereiche und Forschungsgrundlagen.
+
+### 5. Infrastructure
+
+Technische Plattformarchitektur und Betriebsgrundlagen.
+
+### 6. AI Web
+
+Reasoning-, Semantik- und KI-bezogene Architekturgrundlagen.
 
 ---
 
-## System Principle
+## Aktuelle Pipeline
 
-Every domain must be:
-
-- interconnected
-- traceable
-- scientifically grounded
-- operationally useful
-- enterprise scalable
-
----
-
-## Long-Term Vision
-
-Build a sovereign European research and infrastructure intelligence framework.
+```text
+Markdown-Dateien
+-> RDF Parser
+-> Turtle Graph
+-> Validator
+-> Validierungsbericht
 

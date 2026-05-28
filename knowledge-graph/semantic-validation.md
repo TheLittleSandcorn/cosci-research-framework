@@ -1,45 +1,29 @@
-# Semantic Validation Layer
+---
+title: Semantic Validation
+level: Implementierbar
+status: draft
+---
 
-## Purpose
+# Semantic Validation
 
-This document defines how future CoSci documents should be checked against semantic boundaries and 
-epistemic discipline rules.
+## Zweck
 
-The goal is to prevent:
+Definition der aktuellen semantischen Validierungslogik
+innerhalb der CoSci-Pipeline.
 
-- semantic drift
-- conceptual inflation
-- unsupported claims
-- metaphor-as-fact errors
-- uncontrolled abstraction
+Die Validierung prüft:
+- strukturelle Konsistenz
+- erlaubte Werte
+- minimale semantische Disziplin
 
 ---
 
-## Validation Checklist
+# Aktuelle Pipeline
 
-Every new document should be reviewed against the following questions:
+## Schritt 1 — Markdown
 
-| Check | Question |
-|---|---|
-| Epistemic Level | Is every major claim assigned to a level: formal, implementable, empirical, 
-interpretive, or visionary? |
-| Restricted Terms | Are restricted terms clearly marked and justified? |
-| Evidence | Are factual claims supported by sources or internal reasoning? |
-| Implementation Status | Is it clear what exists, what is planned, and what is speculative? |
-| Scope Control | Does the document avoid unnecessary abstraction? |
-| Drift Risk | Could this document create semantic ambiguity later? |
-
----
-
-## Required Labels
-
-Every major claim should use one of the following labels:
+Eingabedateien:
 
 ```text
-[FORMAL]
-[IMPLEMENTABLE]
-[EMPIRICAL]
-[INTERPRETIVE]
-[VISIONARY]
-
+knowledge-graph/*.md
 

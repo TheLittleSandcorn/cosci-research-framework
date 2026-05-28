@@ -1,90 +1,43 @@
-# Semantic Linter & Validation Rules
+---
+title: Semantic Linter
+level: Implementierbar
+status: draft
+---
 
-## Purpose
+# Semantic Linter
 
-This document defines rules that can later be automated to detect semantic drift, conceptual inflation, 
-and epistemic boundary violations.
+## Zweck
 
-## Core Rules
+Definition maschinenprüfbarer Regeln zur Erkennung semantischer
+Inkonsistenzen und semantischer Inflation.
 
-### 1. Epistemic Level Assignment
+Der Semantic Linter ergänzt:
+- semantic-boundaries.md
+- semantic-validation.md
+- entity-model.ttl
 
-Every major claim should be assigned to one of the following levels:
+---
 
-- Formal
-- Implementable
-- Empirical
-- Interpretive
-- Visionary
+# Kernprinzip
 
-Missing assignment should produce a linter warning.
+Semantische Aussagen sollen:
+- explizit
+- kategorisiert
+- überprüfbar
+- reproduzierbar
 
-### 2. Restricted Terms
+sein.
 
-Restricted terms such as:
+---
 
-- transdimensional
-- emergent
-- cognitive
-- consciousness
-- lattice
-- epistemic system
-- algebraically grounded
+# Linter-Regeln
 
-require an explicit epistemic level marker.
+## Regel 1 — Pflicht-Frontmatter
 
-Missing marker should produce a linter error.
+Jede Datei im knowledge-graph benötigt:
 
-### 3. Implementation Status
-
-Documents must clearly separate:
-
-- implemented
-- planned
-- speculative
-
-Unclear status should produce a warning.
-
-### 4. Provenance
-
-Major factual claims should reference either:
-
-- a source
-- a decision log entry
-- a reasoning trace
-- an implementation artifact
-
-Missing provenance should produce a warning.
-
-### 5. Knowledge Graph Files
-
-Files inside `knowledge-graph/` should include:
-
-- purpose
-- status
-- epistemic level
-- validation rules if applicable
-
-## Future Automation
-
-Planned automation:
-
-- Markdown parser
-- rule checker
-- restricted term scanner
-- provenance checker
-- GitHub Action
-- violation report
-
-## Current Status
-
-- Rule definition: active
-- Automation: not implemented
-- Enforcement: manual review only
-
-## Final Rule
-
-A semantic linter is only valuable when it becomes executable.
-The next step after this file is implementation.
-
+```yaml
+title:
+level:
+status:
 
