@@ -1,0 +1,201 @@
+@prefix cosci: <http://cosci.local/ontology#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+cosci:KnowledgeDocument a rdfs:Class ;
+    rdfs:label "Knowledge Document" .
+
+cosci:contentPreview a rdf:Property ;
+    rdfs:domain cosci:KnowledgeDocument ;
+    rdfs:range xsd:string .
+
+cosci:level a rdf:Property ;
+    rdfs:domain cosci:KnowledgeDocument ;
+    rdfs:range xsd:string .
+
+cosci:status a rdf:Property ;
+    rdfs:domain cosci:KnowledgeDocument ;
+    rdfs:range xsd:string .
+
+<http://example.org/cosci/README> a cosci:KnowledgeDocument ;
+    cosci:contentPreview """# CoSci Knowledge Graph
+
+Minimal machine-readable knowledge structure for Phase 1.
+
+## Purpose
+
+This directory contains the foundational semantic structures of the CoSci framework.
+
+Current scope:
+
+- semantic boundaries
+- validation rules
+- ontology model
+- RDF graph generation
+- graph validation
+
+## Current Status
+
+Phase 1:
+- Markdown → RDF transformation
+- Minimal ontology
+- Type-scoped validation
+- Semantic boundary enforcement
+
+Not implemented yet:
+
+- inference
+- SHACL validation
+- graph reasoning
+- drift metrics
+- CI/CD enforcement
+
+## Discipline Principles
+
+- Explicit semantics over impl""" ;
+    cosci:level "Formal" ;
+    cosci:status "stable" ;
+    dcterms:created "2026-05-28T03:04:42.086691" ;
+    dcterms:title "Knowledge Graph Overview" .
+
+<http://example.org/cosci/semantic-boundaries> a cosci:KnowledgeDocument ;
+    cosci:contentPreview """# Semantic Boundaries & Epistemic Discipline
+
+## Purpose
+
+This document prevents semantic inflation, conceptual drift, and uncontrolled abstraction inside the 
+CoSci Research Framework.
+
+Every future claim must be assigned to a clear epistemic level.
+
+---
+
+## Binding Epistemic Levels
+
+| Level | Allowed Claims | Not Allowed |
+|---|---|---|
+| Formal | mathematically or logically provable claims | metaphor presented as fact |
+| Implementable | technically buildable with current tools | unimplemented system claims |
+| Empirical | measurable through tests or metrics | untested performance claims |
+""" ;
+    cosci:level "Interpretativ" ;
+    cosci:status "draft" ;
+    dcterms:created "2026-05-28T03:04:42.086916" ;
+    dcterms:title "semantic-boundaries" .
+
+<http://example.org/cosci/semantic-linter> a cosci:KnowledgeDocument ;
+    cosci:contentPreview """# Semantic Linter & Validation Rules
+
+## Purpose
+
+This document defines rules that can later be automated to detect semantic drift, conceptual inflation, 
+and epistemic boundary violations.
+
+## Core Rules
+
+### 1. Epistemic Level Assignment
+
+Every major claim should be assigned to one of the following levels:
+
+- Formal
+- Implementable
+- Empirical
+- Interpretive
+- Visionary
+
+Missing assignment should produce a linter warning.
+
+### 2. Restricted Terms
+
+Restricted terms such as:
+
+- transdimensional
+- emergent
+- cognitive
+- consciousness
+- lattice
+- epistemic system
+- algebraically grounded
+
+requir""" ;
+    cosci:level "Interpretativ" ;
+    cosci:status "draft" ;
+    dcterms:created "2026-05-28T03:04:42.087125" ;
+    dcterms:title "semantic-linter" .
+
+<http://example.org/cosci/semantic-validation> a cosci:KnowledgeDocument ;
+    cosci:contentPreview """# Semantic Validation Layer
+
+## Purpose
+
+This document defines how future CoSci documents should be checked against semantic boundaries and 
+epistemic discipline rules.
+
+The goal is to prevent:
+
+- semantic drift
+- conceptual inflation
+- unsupported claims
+- metaphor-as-fact errors
+- uncontrolled abstraction
+
+---
+
+## Validation Checklist
+
+Every new document should be reviewed against the following questions:
+
+| Check | Question |
+|---|---|
+| Epistemic Level | Is every major claim assigned to a level: formal, implementable, empirical, 
+interpretive, or visionary? |
+| Restricted Terms | Are restr""" ;
+    cosci:level "Interpretativ" ;
+    cosci:status "draft" ;
+    dcterms:created "2026-05-28T03:04:42.087327" ;
+    dcterms:title "semantic-validation" .
+
+<http://example.org/cosci/system-map> a cosci:KnowledgeDocument ;
+    cosci:contentPreview """# CoSci System Map
+
+## Core Domains
+
+- Research
+- Governance
+- Infrastructure
+- AI Systems
+- Knowledge Graphs
+- Benchmarking
+- Digital Sovereignty
+- Open Science
+
+---
+
+## Strategic Objective
+
+Transform fragmented technological knowledge into structured operational intelligence systems.
+
+---
+
+## System Principle
+
+Every domain must be:
+
+- interconnected
+- traceable
+- scientifically grounded
+- operationally useful
+- enterprise scalable
+
+---
+
+## Long-Term Vision
+
+Build a sovereign European research and infrastructure intelligence framework.""" ;
+    cosci:level "Interpretativ" ;
+    cosci:status "draft" ;
+    dcterms:created "2026-05-28T03:04:42.087529" ;
+    dcterms:title "system-map" .
+
